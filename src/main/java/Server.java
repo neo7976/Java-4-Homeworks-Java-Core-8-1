@@ -17,9 +17,9 @@ public class Server {
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-                System.out.println("New connection");
+                System.out.println("New connection accept! Port: " + clientSocket.getPort());
                 final String name = in.readLine();
-                out.println(String.format("Привет %s, твой порт подключения: [%d ]", name, clientSocket.getPort()));
+                out.println(String.format("Привет %s!, твой порт подключения: [%d ]", name, clientSocket.getPort()));
             }
         } catch (IOException e) {
             e.printStackTrace();

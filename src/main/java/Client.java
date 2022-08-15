@@ -7,7 +7,7 @@ import java.net.Socket;
 public class Client {
     public static void main(String[] args) {
         String host = "127.0.0.1";
-        int port = 52;
+        int port = 2125;
 
         try (Socket client = new Socket(host, port);
              PrintWriter out = new PrintWriter(client.getOutputStream(), true);
